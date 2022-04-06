@@ -2,9 +2,8 @@
 
 Repository to save my solutions to different coding challenges and programming problems:
 
-- [AlgoExpert](https://www.algoexpert.io/product)
 - [CTCI](https://github.com/careercup/CtCI-6th-Edition)
-- [FrontendExpert](https://www.algoexpert.io/frontend/product)
+- [Google Tech Dev Guide Interview Prep](https://techdevguide.withgoogle.com/paths/interview/)
 - [Leetcode](https://leetcode.com/)
 - [Project Euler](https://projecteuler.net/archives)
 
@@ -12,4 +11,5 @@ Repository to save my solutions to different coding challenges and programming p
 
 ### 2022 Goals
 
-[]: ...
+[ ]: Complete Leetcode's [Challenges for New Users List](https://leetcode.com/problem-list/challenges-for-new-users/)
+[ ]: Complete Google's [Overview & Tips section](https://techdevguide.withgoogle.com/paths/interview/)
