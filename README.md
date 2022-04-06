@@ -11,5 +11,6 @@ Repository to save my solutions to different coding challenges and programming p
 
 ### 2022 Goals
 
-[ ]: Complete Leetcode's [Challenges for New Users List](https://leetcode.com/problem-list/challenges-for-new-users/)
-[ ]: Complete Google's [Overview & Tips section](https://techdevguide.withgoogle.com/paths/interview/)
+- [ ]: Complete Leetcode's [Challenges for New Users List](https://leetcode.com/problem-list/challenges-for-new-users/)
+
+- [ ]: Complete Google's [Overview & Tips section](https://techdevguide.withgoogle.com/paths/interview/)
