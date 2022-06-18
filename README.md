@@ -3,7 +3,7 @@
 Repository to save my solutions to different coding challenges and programming problems:
 
 - [Cracking The Coding Interview, CTCI](https://github.com/careercup/CtCI-6th-Edition)
-- [Google Tech Dev Guide Interview Prep](https://techdevguide.withgoogle.com/paths/interview/)
+- [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/)
 - [Leetcode](https://leetcode.com/)
 - [Project Euler](https://projecteuler.net/archives)
 
