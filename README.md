@@ -14,3 +14,5 @@ Repository to save my solutions to different coding challenges and programming p
 - [ ]: Complete Leetcode's [Challenges for New Users List](https://leetcode.com/problem-list/challenges-for-new-users/)
 
 - [ ]: Complete Google's [Overview & Tips section](https://techdevguide.withgoogle.com/paths/interview/)
+
+- [ ]: Complete Leetcode's [Top Interview Questions - Easy Collection](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
