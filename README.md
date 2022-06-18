@@ -2,7 +2,7 @@
 
 Repository to save my solutions to different coding challenges and programming problems:
 
-- [CTCI](https://github.com/careercup/CtCI-6th-Edition)
+- [Cracking The Coding Interview, CTCI](https://github.com/careercup/CtCI-6th-Edition)
 - [Google Tech Dev Guide Interview Prep](https://techdevguide.withgoogle.com/paths/interview/)
 - [Leetcode](https://leetcode.com/)
 - [Project Euler](https://projecteuler.net/archives)
@@ -16,3 +16,5 @@ Repository to save my solutions to different coding challenges and programming p
 - [ ]: Complete Google's [Overview & Tips section](https://techdevguide.withgoogle.com/paths/interview/)
 
 - [ ]: Complete Leetcode's [Top Interview Questions - Easy Collection](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
+
+- [ ]: CTCI Chaper 1
