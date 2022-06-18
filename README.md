@@ -6,6 +6,7 @@ Repository to save my solutions to different coding challenges and programming p
 - [Google Tech Dev Guide](https://techdevguide.withgoogle.com/paths/)
 - [Leetcode](https://leetcode.com/)
 - [Project Euler](https://projecteuler.net/archives)
+- [Grokking the Coding Interview: Patterns for Coding Questions](https://www.educative.io/courses/grokking-the-coding-interview)
 
 ## Milestones
 
