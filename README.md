@@ -13,8 +13,10 @@ Repository to save my solutions to different coding challenges and programming p
 
 - [ ]: Complete Leetcode's [Challenges for New Users List](https://leetcode.com/problem-list/challenges-for-new-users/)
 
-- [ ]: Complete Google's [Overview & Tips section](https://techdevguide.withgoogle.com/paths/interview/)
+- [ ]: Complete Google's [Data Structures & Algorithms](https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/)
 
 - [ ]: Complete Leetcode's [Top Interview Questions - Easy Collection](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
 
 - [ ]: CTCI Chaper 1
+
+- [ ]: Complete Google's [Interview Prep](https://techdevguide.withgoogle.com/paths/interview/)
