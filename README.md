@@ -10,7 +10,7 @@ Repository to save my solutions to different coding challenges and programming p
 
 ## Milestones
 
-### 2022 Goals
+### 2023 Goals
 
 - [ ]: Complete Leetcode's [Challenges for New Users List](https://leetcode.com/problem-list/challenges-for-new-users/)
 
