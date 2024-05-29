@@ -19,7 +19,7 @@ The solutions are written in Golang.
 
 ```go
 /*
-[Issue title]: [link]
+[Issue title]
 
 [Short solution explanation]
 */
