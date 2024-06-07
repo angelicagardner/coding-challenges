@@ -11,6 +11,7 @@ jobs:
       contents: read
       issues: write
       pull-requests: write
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -21,8 +22,9 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           if (context.payload.pull_request.body) {
-            const issue_number = context.payload.pull_request.body.match(/#(\d+)/)[1];
-            if (issue_number) {
+            const issueNumberMatch = context.payload.pull_request.body.match(/#(\d+)/);
+            if (issueNumberMatch && issueNumberMatch[1]) {
+              const issue_number = issueNumberMatch[1];
               const issue = await github.issues.get({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -36,7 +38,9 @@ jobs:
                 issue_number: context.issue.number,
                 labels: labels
               });
+            } else {
+              console.log("No issue number found in the pull request body.");
             }
-          else {
-            console.log("No issue number found in the pull request body.");
+          } else {
+            console.log("Pull request body is null or undefined.");
           }
