@@ -2,7 +2,7 @@ name: Sync Labels from Issue to PR
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize]
 
 jobs:
   sync-labels:
@@ -13,8 +13,11 @@ jobs:
       pull-requests: write
 
     steps:
-    - name: Checkout code
+    - name: Checkout main branch
       uses: actions/checkout@v2
+      with:
+        ref: main
+        fetch-depth: 0
 
     - name: Sync Labels
       uses: actions/github-script@v3
