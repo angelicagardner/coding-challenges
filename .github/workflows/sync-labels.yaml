@@ -20,19 +20,23 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const issue_number = context.payload.pull_request.body.match(/#(\d+)/)[1];
-          if (issue_number) {
-            const issue = await github.issues.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue_number,
-            });
-            const labels = issue.data.labels.map(label => label.name);
-            
-            await github.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              labels: labels
-            });
+          if (context.payload.pull_request.body) {
+            const issue_number = context.payload.pull_request.body.match(/#(\d+)/)[1];
+            if (issue_number) {
+              const issue = await github.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue_number,
+              });
+              const labels = issue.data.labels.map(label => label.name);
+              
+              await github.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: labels
+              });
+            }
+          else {
+            console.log("No issue number found in the pull request body.");
           }
