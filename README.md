@@ -28,15 +28,15 @@ The solutions are written in Golang.
 
 package challenge
 
-// Time complexity:		O(n^2)
-// Space complexity: 	O(1)
+// Time complexity:     O(n^2)
+// Space complexity:    O(1)
 func BruteForceSolution() {
     // Implementation here
     return answer
 }
 
-// Time complexity:		O(n)
-// Space complexity: 	O(n)
+// Time complexity:     O(n)
+// Space complexity:    O(n)
 func ImprovedSolution() {
     // Implementation here
     return answer
