@@ -1,5 +1,5 @@
 /* Problem 9. Palindrome Number */
-package main
+package leetcode
 
 import (
 	"fmt"
