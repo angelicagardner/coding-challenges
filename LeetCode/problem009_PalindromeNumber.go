@@ -2,7 +2,6 @@
 package leetcode
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -12,7 +11,6 @@ func isPalindrome(x int) bool {
 		return false
 	}
 
-	// Variables to store the original number and the reversed number
 	original := x
 	reversed := 0
 
@@ -32,12 +30,4 @@ func isPalindrome(x int) bool {
 
 	// Check if the original number is the same as the reversed number
 	return original == reversed
-}
-
-func main() {
-	// Test the function with a sample input
-	var x int
-	fmt.Println("Enter an integer:")
-	fmt.Scan(&x)
-	fmt.Println(isPalindrome(x))
 }
