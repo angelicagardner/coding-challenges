@@ -1,10 +1,15 @@
-/* Problem 9. Palindrome Number */
+/*
+Problem 9. Palindrome Number
+*/
+
 package leetcode
 
 import (
 	"math"
 )
 
+// Time complexity:  O(log10​(n))
+// Space complexity: O(1)
 func isPalindrome(x int) bool {
 	// Negative numbers are not palindromes
 	if x < 0 {
