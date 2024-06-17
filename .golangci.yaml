@@ -1,0 +1,29 @@
+linters:
+  enable:
+    - errorlint
+    #- godot
+    - goimports
+    - misspell
+    - nolintlint
+    - predeclared
+    - testifylint
+    - unconvert
+    - durationcheck
+    - exportloopref
+    - nilerr
+    - whitespace
+    - unparam
+    - tagalign
+    - stylecheck
+    - gosec
+    #- gofumpt
+    #- perfsprint
+    # - nestif
+    # - noctx
+    # - prealloc
+    # - depguard
+    # - revive
+    # - gocritic
+    # - wastedassign
+    # - goconst
+    # - gomnd
