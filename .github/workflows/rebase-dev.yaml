@@ -11,24 +11,22 @@ jobs:
 
     steps:
     - name: Checkout main branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
-        ref: main
-
-    - name: Fetch all branches
-      run: git fetch origin "+refs/heads/*:refs/remotes/origin/*"
-    
-    - name: Checkout dev branch
-      run: git checkout dev
+        fetch-depth: 0
 
     - name: Setup Git
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+    - name: Checkout dev branch
+      run: git checkout dev
+
     - name: Rebase dev onto main
-      run: git rebase main
-    
+      run: |
+        git rebase origin/main
+
     - name: Push changes
       run: git push origin dev --force
       env:
