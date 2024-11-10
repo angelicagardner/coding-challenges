@@ -1,0 +1,44 @@
+name: Conventional Commit messages linting
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Install commitlint
+        run: |
+          npm install --save-dev @commitlint/{config-conventional,cli}
+      - name: Configure commitlint
+        run: |
+          echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.mjs
+      - name: Print versions
+        run: |
+          git --version
+          node --version
+          npm --version
+          npx commitlint --version
+      - name: Validate Commit Message on Push
+        if: github.event_name == 'push'
+        run: |
+          # Validate the last commit message
+          npx commitlint --from HEAD~1 --to HEAD --verbose
+      - name: Validate Commit Messages in PR
+        if: github.event_name == 'pull_request'
+        run: |
+          # Validate all commit messages in the PR
+          npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose

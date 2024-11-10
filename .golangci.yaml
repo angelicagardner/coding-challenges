@@ -17,11 +17,11 @@ linters:
     - stylecheck
     - gosec
     #- gofumpt
-    #- perfsprint
-    # - nestif
-    # - noctx
-    # - prealloc
-    # - depguard
+    - perfsprint
+    - nestif
+    - noctx
+    - prealloc
+    - depguard
     # - revive
     # - gocritic
     # - wastedassign
