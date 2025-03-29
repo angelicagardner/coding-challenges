@@ -11,181 +11,31 @@ func TestMergeTwoLists(t *testing.T) {
 		l2       *ListNode
 		expected *ListNode
 	}{
-		{
-			name:     "Both lists empty",
-			l1:       nil,
-			l2:       nil,
-			expected: nil,
+		{"Both lists empty", nil, nil, nil},
+		{"One list empty, one non-empty",
+			&ListNode{1, &ListNode{2, &ListNode{4, nil}}},
+			nil,
+			&ListNode{1, &ListNode{2, &ListNode{4, nil}}},
 		},
-		{
-			name: "One list empty, one non-empty",
-			l1:   &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 4}}},
-			l2:   nil,
-			expected: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 2,
-					Next: &ListNode{
-						Val: 4,
-					},
-				},
-			},
+		{"Both lists have elements",
+			&ListNode{1, &ListNode{2, &ListNode{4, nil}}},
+			&ListNode{1, &ListNode{3, &ListNode{4, nil}}},
+			&ListNode{1, &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, &ListNode{4, nil}}}}}},
 		},
-		{
-			name: "Both lists have elements",
-			l1: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 2,
-					Next: &ListNode{
-						Val: 4,
-					},
-				},
-			},
-			l2: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 4,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 2,
-						Next: &ListNode{
-							Val: 3,
-							Next: &ListNode{
-								Val: 4,
-								Next: &ListNode{
-									Val: 4,
-								},
-							},
-						},
-					},
-				},
-			},
+		{"l1 has smaller elements",
+			&ListNode{1, &ListNode{3, &ListNode{5, nil}}},
+			&ListNode{2, &ListNode{4, &ListNode{6, nil}}},
+			&ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, &ListNode{5, &ListNode{6, nil}}}}}},
 		},
-		{
-			name: "l1 has smaller elements",
-			l1: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 5,
-					},
-				},
-			},
-			l2: &ListNode{
-				Val: 2,
-				Next: &ListNode{
-					Val: 4,
-					Next: &ListNode{
-						Val: 6,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 2,
-					Next: &ListNode{
-						Val: 3,
-						Next: &ListNode{
-							Val: 4,
-							Next: &ListNode{
-								Val: 5,
-								Next: &ListNode{
-									Val: 6,
-								},
-							},
-						},
-					},
-				},
-			},
+		{"l2 has smaller elements",
+			&ListNode{2, &ListNode{4, &ListNode{6, nil}}},
+			&ListNode{1, &ListNode{3, &ListNode{5, nil}}},
+			&ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, &ListNode{5, &ListNode{6, nil}}}}}},
 		},
-		{
-			name: "l2 has smaller elements",
-			l1: &ListNode{
-				Val: 2,
-				Next: &ListNode{
-					Val: 4,
-					Next: &ListNode{
-						Val: 6,
-					},
-				},
-			},
-			l2: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 3,
-					Next: &ListNode{
-						Val: 5,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 2,
-					Next: &ListNode{
-						Val: 3,
-						Next: &ListNode{
-							Val: 4,
-							Next: &ListNode{
-								Val: 5,
-								Next: &ListNode{
-									Val: 6,
-								},
-							},
-						},
-					},
-				},
-			},
-		},
-		{
-			name: "Lists with duplicate elements",
-			l1: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 1,
-					},
-				},
-			},
-			l2: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 1,
-					},
-				},
-			},
-			expected: &ListNode{
-				Val: 1,
-				Next: &ListNode{
-					Val: 1,
-					Next: &ListNode{
-						Val: 1,
-						Next: &ListNode{
-							Val: 1,
-							Next: &ListNode{
-								Val: 1,
-								Next: &ListNode{
-									Val: 1,
-								},
-							},
-						},
-					},
-				},
-			},
+		{"Lists with duplicate elements",
+			&ListNode{1, &ListNode{1, &ListNode{1, nil}}},
+			&ListNode{1, &ListNode{1, &ListNode{1, nil}}},
+			&ListNode{1, &ListNode{1, &ListNode{1, &ListNode{1, &ListNode{1, &ListNode{1, nil}}}}}},
 		},
 	}
 
