@@ -1,43 +1,49 @@
 # Coding Challenges
 
-This repository saves my solutions to the following different coding challenges:
+This repository saves my solutions to various coding challenges.
+The solutions are written in Golang.
+
+## Challenges
 
 - [Cracking The Coding Interview (CTCI)](https://github.com/careercup/CtCI-6th-Edition)
-- [Interviewing.io](https://interviewing.io/)
-- [Leetcode](https://leetcode.com/)
 - [Project Euler](https://projecteuler.net/archives)
 
-The solutions are written in Golang.
+> **LeetCode:** I no longer store LeetCode solutions in this repository. You can
+> follow my progress directly on my [LeetCode Profile](https://leetcode.com/u/angelicahjelmgardner/).
 
 ## Format
 
-1. Problem from one coding challenge is created as an Issue. The issue has relevant Labels and a description of the problem.
+1. Problem from one coding challenge is created as an Issue. The issue has
+relevant Labels and a description of the problem.
 
-2. Solution to a Issue (coding problem) is submitted as a Pull Request. The solution also has an associated _test file with test cases to verify the solution.
+2. Solution to a Issue (coding problem) is submitted as a Pull Request. The
+solution also has an associated _test file with test cases to verify the solution.
 
-3. The solution file will be named to reflect problem name, e.g. **problem_001.go**, and associated test file will have the same name and end with **_test** suffix, e.g. **problem_001_test.go**.
+3. The solution file will be named to reflect problem name, e.g.
+**problem_001.go**, and associated test file will have the same name and end
+with **_test** suffix, e.g. **problem_001_test.go**.
 
-4. The solution file should contain a brute force solution and an improved solution. Write the time and space complexities as comments about the function. The test cases should test both solutions.
+4. The solution file should contain a brute force solution and an improved
+solution. Write the time and space complexities as comments about the function.
+The test cases should test both solutions.
 
 ### Solution Template
 
 ```go
 /*
 [Issue title]
-*/
-
-package challenge
-
-// Time complexity:     O(n^2)
-// Space complexity:    O(1)
-func BruteForceSolution() {
-    // Implementation here
-    return answer
-}
 
 // Time complexity:     O(n)
 // Space complexity:    O(n)
 func ImprovedSolution() {
+
+*/
+
+package challenge
+
+// Time complexity:     O(n)
+// Space complexity:    O(n)
+func Solution() {
     // Implementation here
     return answer
 }
