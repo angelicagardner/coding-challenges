@@ -30,16 +30,7 @@ The test cases should test both solutions.
 ### Solution Template
 
 ```go
-/*
-[Issue title]
-
-// Time complexity:     O(n)
-// Space complexity:    O(n)
-func ImprovedSolution() {
-
-*/
-
-package challenge
+package challengeName
 
 // Time complexity:     O(n)
 // Space complexity:    O(n)
