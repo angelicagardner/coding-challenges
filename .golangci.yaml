@@ -1,7 +1,7 @@
 linters:
+  disable-all: false
   enable:
     - errorlint
-    #- godot
     - goimports
     - misspell
     - nolintlint
@@ -9,21 +9,31 @@ linters:
     - testifylint
     - unconvert
     - durationcheck
-    - exportloopref
     - nilerr
     - whitespace
     - unparam
     - tagalign
     - stylecheck
     - gosec
-    #- gofumpt
     - perfsprint
     - nestif
     - noctx
     - prealloc
     - depguard
-    # - revive
-    # - gocritic
-    # - wastedassign
-    # - goconst
-    # - gomnd
+    - gocritic
+    - bodyclose
+
+linters-settings:
+  depguard:
+    rules:
+      main:
+        deny:
+          - pkg: "io/ioutil"
+            desc: "ioutil is deprecated, use os or io instead"
+
+  nestif:
+    min-complexity: 5
+
+run:
+  timeout: 5m
+  tests: true
